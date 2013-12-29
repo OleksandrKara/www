@@ -1,8 +1,6 @@
 //basic fancybox setup
 	function validateName(name) { 
-		/*var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		*/
-		var reg = /^[A-zа-яА-ЯёЁа-яіїєґ ]+$/;
+		var reg = /^[A-ZА-ЯІЇЄҐ]{1}[a-zа-яіїєґ]{3,}(\s{1}[A-ZА-ЯІЇЄҐ]{1}[a-zа-яіїєґ]{3,}){0,2}$/;
 	    return reg.test(name);
 	}
 
@@ -40,7 +38,8 @@
 				
 				$.ajax({
 					type: 'POST',
-					url: 'sendmessage.py',
+					url: 'http://localhost:8888/send_mail/',
+					crossDomain: true,
 					data: $("#contact").serialize(),
 					success: function(data) {
 						if(data == "true") {

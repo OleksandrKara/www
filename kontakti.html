@@ -71,7 +71,7 @@
       </div>
       <div class="col-16">
         <h2 class="h2 p2">Записаться:</h2>
-        <form id="form" method="post" action="#">
+        <form id="form" method="post" action="http://localhost:8888/send_mail/">
           <fieldset>
             <label>
               <input type="text" value="Full Name" onBlur="if(this.value=='') this.value='Full Name'" onFocus="if(this.value =='Full Name' ) this.value=''">
@@ -82,7 +82,9 @@
             <label>
               <textarea onBlur="if(this.value==''){this.value='Message'}" onFocus="if(this.value=='Message'){this.value=''}">Message</textarea>
             </label>
-            <div class="btns"><a href="#" class="link-1">Clear</a><a href="#" class="link-1">Send</a></div>
+            <div class="btns">
+				<a href="javascript:{}" onclick="document.getElementById('form').reset();" class="link-1">Очистить</a> 
+				<a href="javascript:{}" onclick="document.getElementById('form').submit(); return false;" class="link-1">Отправить</a></div>
           </fieldset>
         </form>
       </div>
