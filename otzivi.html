@@ -18,6 +18,7 @@
 <script src="js/is.mobile.js"></script>
 <script src="js/script.js"></script>
 
+<script src="//vk.com/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
 
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
@@ -46,38 +47,17 @@
 <!--==============================content================================-->
 <section id="content">
   <div class="pad-1">
-    <div class="page2-row1">
-      <div class="col-4">
-        <h2 class="h2 p2">My vision:</h2>
-        <div class="wrap"> <img src="images/page2-img1.jpg" alt="" class="img-border img-indent">
-          <div class="extra-wrap">
-            <p class="p4"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed arcu dui, eu tincidunt sem. Vivamus hendrerit mauris ut dui gravida ut viverra lectus tincidunt. </i></p>
-            <p>Vivamus hendrerit mauris ut dui gravida ut viverra lectus tincidunt. Cras mattis tempor eros nec tristique. Sed sed felis arcu, vel vehicula augue. <a href="#" class="link">Maecenas faucibus</a> sagittis cursus. Fusce tincidunt, tellus eget tristique cursus, orci mi iaculis.</p>
-            <a href="#" class="link-1 link-1-pad bot-1">Read more</a> </div>
-        </div>
-      </div>
-      <div class="col-5">
-        <h3 class="h3 p2">Exhibition &amp; awards:</h3>
-        <ul class="list-2">
-          <li><span><a href="#">Vivamus hendrerit mauris</a> ut dui gravida ut viverra lectus tincidunt. Cras mattis tempor eros</span></li>
-          <li><span><a href="#">Ut dui gravida ut viverra lectus tincidunt.</a> Cras mattis tempor eros nec tristique. </span></li>
-          <li><span><a href="#">Cras mattis tempor</a> eros nec tristique. Sed sed felis arcu, vel vehicula augue.</span></li>
-          <li><span><a href="#">Sed sed felis arcu</a> vel vehicula augue. Maecenas faucibus sagittis cursus.</span></li>
-        </ul>
-      </div>
-    </div>
-    <h2 class="h2 p2">My bio:</h2>
-    <div class="page2-row2">
-      <div class="col-6">
-        <p class="upper p5">Lorem ipsum dolor sit amet, consectetur dipiscing elit. Vivamus sed arcu dui, eu tincidunt sem. Vivamus hendrerit mauris ut dui gravida ut </p>
-        <p>Viverra lectus tincidunt. Cras mattis tempor eros nec tristique. Sed sed felis arcu, vel vehicula augue. Maecenas faucibus sagittis cursus. Fusce tincidunt, tellus eget tristique cursus, orci mi iaculis sem, sit amet dictum velit velit eu magna. Nunc viverra nisi sed orci tincidunt at hendrerit orci luctus. Suspendisse tincidunt, ipsum at semper <a href="#" class="link">facilisis, turpis nisi dictum diam</a>, nec neque velit</p>
-      </div>
-      <div class="col-7">
-        <div class="comment">
-          <p class="upper clr-1">Lorem ipsum dolor sit amet, consectetur dipiscing elit. Vivamus sed arcu dui, eu tincidunt sem. Vivamus hendrerit mauris ut dui gravida ut</p>
-        </div>
-        <a href="#" class="link-1 link-1-pad">Read more</a> </div>
-    </div>
+  
+		<script type="text/javascript">
+		  VK.init({apiId: 4094753, onlyWidgets: true});
+		</script>
+		
+		<br>
+		<h3 class="h3-2">Будем рады любому Вашему отзыву:</h3>
+		<div id="vk_comments"></div>
+		<script type="text/javascript">
+		VK.Widgets.Comments("vk_comments", {limit: 10, width: "720", attach: "*"});
+		</script>
   </div>
 </section>
 <!--==============================footer=================================-->
